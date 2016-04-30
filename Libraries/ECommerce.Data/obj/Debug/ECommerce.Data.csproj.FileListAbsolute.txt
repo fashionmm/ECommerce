@@ -1,0 +1,11 @@
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Data\bin\Debug\ECommerce.Data.dll.config
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Data\bin\Debug\ECommerce.Data.dll
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Data\bin\Debug\ECommerce.Data.pdb
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Data\bin\Debug\EntityFramework.dll
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Data\bin\Debug\EntityFramework.xml
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Data\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Data\obj\Debug\ECommerce.Data.csprojResolveAssemblyReference.cache
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Data\obj\Debug\ECommerce.Data.dll
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Data\obj\Debug\ECommerce.Data.pdb

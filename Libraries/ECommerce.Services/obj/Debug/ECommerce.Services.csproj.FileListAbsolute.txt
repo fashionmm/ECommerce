@@ -1,0 +1,4 @@
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Services\bin\Debug\ECommerce.Services.dll
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Services\bin\Debug\ECommerce.Services.pdb
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Services\obj\Debug\ECommerce.Services.dll
+E:\ECommerce\trunk\ECommerce\Libraries\ECommerce.Services\obj\Debug\ECommerce.Services.pdb
