@@ -1,7 +1,12 @@
-﻿using System;
+﻿using Autofac;
+using Autofac.Integration.Mvc;
+using ECommerce.Core.Configuration;
+using ECommerce.Core.Infrastructure.DependencyManagement;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Web.Mvc;
 
 namespace ECommerce.Core.Infrastructure
 {

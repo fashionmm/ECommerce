@@ -5,42 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 using ECommerce.Core;
-using ECommerce.Core.Caching;
 using ECommerce.Core.Domain;
-using ECommerce.Core.Domain.Blogs;
-using ECommerce.Core.Domain.Catalog;
 using ECommerce.Core.Domain.Common;
 using ECommerce.Core.Domain.Customers;
-using ECommerce.Core.Domain.Forums;
 using ECommerce.Core.Domain.Localization;
-using ECommerce.Core.Domain.Messages;
-using ECommerce.Core.Domain.News;
 using ECommerce.Core.Domain.Orders;
 using ECommerce.Core.Domain.Tax;
 using ECommerce.Core.Domain.Vendors;
-using ECommerce.Services.Catalog;
-using ECommerce.Services.Common;
-using ECommerce.Services.Customers;
-using ECommerce.Services.Directory;
-using ECommerce.Services.Forums;
-using ECommerce.Services.Localization;
-using ECommerce.Services.Logging;
-using ECommerce.Services.Messages;
-using ECommerce.Services.Orders;
-using ECommerce.Services.Security;
-using ECommerce.Services.Seo;
-using ECommerce.Services.Topics;
-using ECommerce.Services.Vendors;
-using ECommerce.Web.Extensions;
 using ECommerce.Web.Framework;
 using ECommerce.Web.Framework.Localization;
-using ECommerce.Web.Framework.Security;
-using ECommerce.Web.Framework.Security.Captcha;
-using ECommerce.Web.Framework.Themes;
-using ECommerce.Web.Infrastructure.Cache;
-using ECommerce.Web.Models.Catalog;
-using ECommerce.Web.Models.Common;
-using ECommerce.Web.Models.Topics;
+
 
 namespace ECommerce.Web.Controllers
 {
@@ -490,10 +464,10 @@ namespace ECommerce.Web.Controllers
             return View(model);
         }
         [HttpPost, ActionName("ContactUs")]
-        [PublicAntiForgery]
-        [CaptchaValidator]
+      //  [PublicAntiForgery]
+      //  [CaptchaValidator]
         //available even when a store is closed
-        [StoreClosed(true)] 
+     //   [StoreClosed(true)] 
         public ActionResult ContactUsSend(ContactUsModel model, bool captchaValid)
         {
             //validate CAPTCHA

@@ -49,6 +49,8 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.Helpers.dll</HintPath>
       <Private>True</Private>
@@ -81,6 +83,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="Configuration\ISettings.cs" />
+    <Compile Include="Configuration\NopConfig.cs" />
     <Compile Include="Domain\Common\Address.cs" />
     <Compile Include="Domain\Common\GenericAttribute.cs" />
     <Compile Include="Domain\Customers\Customer.cs" />
@@ -95,7 +99,11 @@
     <Compile Include="Domain\Directory\Currency.cs" />
     <Compile Include="Domain\Directory\StateProvince.cs" />
     <Compile Include="Domain\Localization\ILocalizedEntity.cs" />
+    <Compile Include="Domain\Localization\ILocalizedEnum.cs" />
     <Compile Include="Domain\Localization\Language.cs" />
+    <Compile Include="Domain\Localization\LocaleStringResource.cs" />
+    <Compile Include="Domain\Localization\LocalizationSettings.cs" />
+    <Compile Include="Domain\Localization\LocalizedProperty.cs" />
     <Compile Include="Domain\Logging\ActivityLog.cs" />
     <Compile Include="Domain\Logging\ActivityLogType.cs" />
     <Compile Include="Domain\Logging\Log.cs" />
@@ -112,13 +120,20 @@
     <Compile Include="Domain\Tax\TaxDisplayType.cs" />
     <Compile Include="Domain\Vendors\Vendor.cs" />
     <Compile Include="Domain\Vendors\VendorNote.cs" />
+    <Compile Include="Infrastructure\AppDomainTypeFinder.cs" />
+    <Compile Include="Infrastructure\DependencyManagement\ContainerManager.cs" />
+    <Compile Include="Infrastructure\DependencyManagement\IDependencyRegistrar.cs" />
     <Compile Include="Infrastructure\ECEngine.cs" />
     <Compile Include="Infrastructure\EngineContext.cs" />
     <Compile Include="Infrastructure\IEngine.cs" />
+    <Compile Include="Infrastructure\IStartupTask.cs" />
+    <Compile Include="Infrastructure\ITypeFinder.cs" />
     <Compile Include="Infrastructure\Singleton.cs" />
+    <Compile Include="Infrastructure\WebAppTypeFinder.cs" />
     <Compile Include="IPagedList.cs" />
     <Compile Include="IStoreContext.cs" />
     <Compile Include="IWorkContext.cs" />
+    <Compile Include="NopException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

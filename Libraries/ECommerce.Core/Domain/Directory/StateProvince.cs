@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ECommerce.Core.Domain.Directory
 {
-    class StateProvince
+    public class StateProvince
     {
     }
 }

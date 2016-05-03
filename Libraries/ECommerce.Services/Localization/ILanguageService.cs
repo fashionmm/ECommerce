@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using ECommerce.Core.Domain.Localization;
-using ECommerce.Core.Domain.Localization;
 
 namespace ECommerce.Services.Localization
 {
