@@ -123,6 +123,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BasePublicController.cs" />
+    <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -176,6 +178,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\ECommerce.Core\ECommerce.Core.csproj">
+      <Project>{c8a9c620-8784-47aa-8285-f2db4b3125df}</Project>
+      <Name>ECommerce.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ECommerce.Web.Framework\ECommerce.Web.Framework.csproj">
+      <Project>{794af00b-78a8-4024-9474-809e78415ab2}</Project>
+      <Name>ECommerce.Web.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

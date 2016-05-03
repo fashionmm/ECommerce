@@ -82,22 +82,43 @@
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
     <Compile Include="Domain\Common\Address.cs" />
+    <Compile Include="Domain\Common\GenericAttribute.cs" />
     <Compile Include="Domain\Customers\Customer.cs" />
+    <Compile Include="Domain\Customers\CustomerExtensions.cs" />
     <Compile Include="Domain\Customers\CustomerRole.cs" />
     <Compile Include="Domain\Customers\ExternalAuthenticationRecord.cs" />
     <Compile Include="Domain\Customers\PasswordFormat.cs" />
+    <Compile Include="Domain\Customers\SystemCustomerAttributeNames.cs" />
+    <Compile Include="Domain\Customers\SystemCustomerNames.cs" />
+    <Compile Include="Domain\Customers\SystemCustomerRoleNames.cs" />
     <Compile Include="Domain\Directory\Country.cs" />
+    <Compile Include="Domain\Directory\Currency.cs" />
     <Compile Include="Domain\Directory\StateProvince.cs" />
     <Compile Include="Domain\Localization\ILocalizedEntity.cs" />
+    <Compile Include="Domain\Localization\Language.cs" />
+    <Compile Include="Domain\Logging\ActivityLog.cs" />
+    <Compile Include="Domain\Logging\ActivityLogType.cs" />
+    <Compile Include="Domain\Logging\Log.cs" />
+    <Compile Include="Domain\Logging\LogLevel.cs" />
     <Compile Include="Domain\Orders\ReturnRequest.cs" />
     <Compile Include="Domain\Orders\ReturnRequestStatus.cs" />
     <Compile Include="Domain\Orders\ShoppingCartItem.cs" />
+    <Compile Include="Domain\Seo\ISlugSupported.cs" />
     <Compile Include="Domain\Shipping\ShippingMethod.cs" />
     <Compile Include="Domain\Stores\IStoreMappingSupported.cs" />
+    <Compile Include="Domain\Stores\Store.cs" />
+    <Compile Include="Domain\Stores\StoreExtensions.cs" />
+    <Compile Include="Domain\Stores\StoreMapping.cs" />
+    <Compile Include="Domain\Tax\TaxDisplayType.cs" />
+    <Compile Include="Domain\Vendors\Vendor.cs" />
+    <Compile Include="Domain\Vendors\VendorNote.cs" />
     <Compile Include="Infrastructure\ECEngine.cs" />
     <Compile Include="Infrastructure\EngineContext.cs" />
     <Compile Include="Infrastructure\IEngine.cs" />
     <Compile Include="Infrastructure\Singleton.cs" />
+    <Compile Include="IPagedList.cs" />
+    <Compile Include="IStoreContext.cs" />
+    <Compile Include="IWorkContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

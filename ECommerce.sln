@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Services", "Libra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Web", "Presentation\ECommerce.Web\ECommerce.Web.csproj", "{B8F27BD0-D271-4BFD-8269-EA6375E56015}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Web.Framework", "ECommerce.Web.Framework\ECommerce.Web.Framework.csproj", "{794AF00B-78A8-4024-9474-809E78415AB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Web.Framework", "Presentation\ECommerce.Web.Framework\ECommerce.Web.Framework.csproj", "{794AF00B-78A8-4024-9474-809E78415AB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
