@@ -22,119 +22,123 @@ namespace ECommerce.Web.Controllers
     {
         #region Fields
 
-        private readonly ICategoryService _categoryService;
-        private readonly IProductService _productService;
-        private readonly IManufacturerService _manufacturerService;
-        private readonly ITopicService _topicService;
-        private readonly ILanguageService _languageService;
-        private readonly ICurrencyService _currencyService;
-        private readonly ILocalizationService _localizationService;
+        //private readonly ICategoryService _categoryService;
+        //private readonly IProductService _productService;
+        //private readonly IManufacturerService _manufacturerService;
+        //private readonly ITopicService _topicService;
+        //private readonly ILanguageService _languageService;
+        //private readonly ICurrencyService _currencyService;
+        //private readonly ILocalizationService _localizationService;
         private readonly IWorkContext _workContext;
         private readonly IStoreContext _storeContext;
-        private readonly IQueuedEmailService _queuedEmailService;
-        private readonly IEmailAccountService _emailAccountService;
-        private readonly ISitemapGenerator _sitemapGenerator;
-        private readonly IThemeContext _themeContext;
-        private readonly IThemeProvider _themeProvider;
-        private readonly IForumService _forumservice;
-        private readonly IGenericAttributeService _genericAttributeService;
-        private readonly IWebHelper _webHelper;
-        private readonly IPermissionService _permissionService;
-        private readonly ICacheManager _cacheManager;
-        private readonly ICustomerActivityService _customerActivityService;
-        private readonly IVendorService _vendorService;
+        //private readonly IQueuedEmailService _queuedEmailService;
+        //private readonly IEmailAccountService _emailAccountService;
+        //private readonly ISitemapGenerator _sitemapGenerator;
+        //private readonly IThemeContext _themeContext;
+        //private readonly IThemeProvider _themeProvider;
+        //private readonly IForumService _forumservice;
+        //private readonly IGenericAttributeService _genericAttributeService;
+        //private readonly IWebHelper _webHelper;
+        //private readonly IPermissionService _permissionService;
+        //private readonly ICacheManager _cacheManager;
+        //private readonly ICustomerActivityService _customerActivityService;
+        //private readonly IVendorService _vendorService;
 
-        private readonly CustomerSettings _customerSettings;
-        private readonly TaxSettings _taxSettings;
-        private readonly CatalogSettings _catalogSettings;
-        private readonly StoreInformationSettings _storeInformationSettings;
-        private readonly EmailAccountSettings _emailAccountSettings;
-        private readonly CommonSettings _commonSettings;
-        private readonly BlogSettings _blogSettings;
-        private readonly NewsSettings _newsSettings;
-        private readonly ForumSettings _forumSettings;
+        //private readonly CustomerSettings _customerSettings;
+        //private readonly TaxSettings _taxSettings;
+        //private readonly CatalogSettings _catalogSettings;
+        //private readonly StoreInformationSettings _storeInformationSettings;
+        //private readonly EmailAccountSettings _emailAccountSettings;
+        //private readonly CommonSettings _commonSettings;
+        //private readonly BlogSettings _blogSettings;
+        //private readonly NewsSettings _newsSettings;
+        //private readonly ForumSettings _forumSettings;
         private readonly LocalizationSettings _localizationSettings;
-        private readonly CaptchaSettings _captchaSettings;
-        private readonly VendorSettings _vendorSettings;
+        //private readonly CaptchaSettings _captchaSettings;
+        //private readonly VendorSettings _vendorSettings;
 
         #endregion
 
         #region Constructors
 
-        public CommonController(ICategoryService categoryService,
-            IProductService productService,
-            IManufacturerService manufacturerService,
-            ITopicService topicService,
-            ILanguageService languageService,
-            ICurrencyService currencyService,
-            ILocalizationService localizationService,
-            IWorkContext workContext, 
-            IStoreContext storeContext,
-            IQueuedEmailService queuedEmailService, 
-            IEmailAccountService emailAccountService,
-            ISitemapGenerator sitemapGenerator,
-            IThemeContext themeContext,
-            IThemeProvider themeProvider,
-            IForumService forumService,
-            IGenericAttributeService genericAttributeService, 
-            IWebHelper webHelper,
-            IPermissionService permissionService,
-            ICacheManager cacheManager,
-            ICustomerActivityService customerActivityService,
-            IVendorService vendorService,
-            CustomerSettings customerSettings, 
-            TaxSettings taxSettings, 
-            CatalogSettings catalogSettings,
-            StoreInformationSettings storeInformationSettings,
-            EmailAccountSettings emailAccountSettings,
-            CommonSettings commonSettings, 
-            BlogSettings blogSettings, 
-            NewsSettings newsSettings,
-            ForumSettings forumSettings,
-            LocalizationSettings localizationSettings, 
-            CaptchaSettings captchaSettings,
-            VendorSettings vendorSettings)
-        {
-            this._categoryService = categoryService;
-            this._productService = productService;
-            this._manufacturerService = manufacturerService;
-            this._topicService = topicService;
-            this._languageService = languageService;
-            this._currencyService = currencyService;
-            this._localizationService = localizationService;
-            this._workContext = workContext;
-            this._storeContext = storeContext;
-            this._queuedEmailService = queuedEmailService;
-            this._emailAccountService = emailAccountService;
-            this._sitemapGenerator = sitemapGenerator;
-            this._themeContext = themeContext;
-            this._themeProvider = themeProvider;
-            this._forumservice = forumService;
-            this._genericAttributeService = genericAttributeService;
-            this._webHelper = webHelper;
-            this._permissionService = permissionService;
-            this._cacheManager = cacheManager;
-            this._customerActivityService = customerActivityService;
-            this._vendorService = vendorService;
+        //public CommonController(ICategoryService categoryService,
+        //    IProductService productService,
+        //    IManufacturerService manufacturerService,
+        //    ITopicService topicService,
+        //    ILanguageService languageService,
+        //    ICurrencyService currencyService,
+        //    ILocalizationService localizationService,
+        //    IWorkContext workContext, 
+        //    IStoreContext storeContext,
+        //    IQueuedEmailService queuedEmailService, 
+        //    IEmailAccountService emailAccountService,
+        //    ISitemapGenerator sitemapGenerator,
+        //    IThemeContext themeContext,
+        //    IThemeProvider themeProvider,
+        //    IForumService forumService,
+        //    IGenericAttributeService genericAttributeService, 
+        //    IWebHelper webHelper,
+        //    IPermissionService permissionService,
+        //    ICacheManager cacheManager,
+        //    ICustomerActivityService customerActivityService,
+        //    IVendorService vendorService,
+        //    CustomerSettings customerSettings, 
+        //    TaxSettings taxSettings, 
+        //    CatalogSettings catalogSettings,
+        //    StoreInformationSettings storeInformationSettings,
+        //    EmailAccountSettings emailAccountSettings,
+        //    CommonSettings commonSettings, 
+        //    BlogSettings blogSettings, 
+        //    NewsSettings newsSettings,
+        //    ForumSettings forumSettings,
+        //    LocalizationSettings localizationSettings, 
+        //    CaptchaSettings captchaSettings,
+        //    VendorSettings vendorSettings)
+        //{
+        //    this._categoryService = categoryService;
+        //    this._productService = productService;
+        //    this._manufacturerService = manufacturerService;
+        //    this._topicService = topicService;
+        //    this._languageService = languageService;
+        //    this._currencyService = currencyService;
+        //    this._localizationService = localizationService;
+        //    this._workContext = workContext;
+        //    this._storeContext = storeContext;
+        //    this._queuedEmailService = queuedEmailService;
+        //    this._emailAccountService = emailAccountService;
+        //    this._sitemapGenerator = sitemapGenerator;
+        //    this._themeContext = themeContext;
+        //    this._themeProvider = themeProvider;
+        //    this._forumservice = forumService;
+        //    this._genericAttributeService = genericAttributeService;
+        //    this._webHelper = webHelper;
+        //    this._permissionService = permissionService;
+        //    this._cacheManager = cacheManager;
+        //    this._customerActivityService = customerActivityService;
+        //    this._vendorService = vendorService;
 
-            this._customerSettings = customerSettings;
-            this._taxSettings = taxSettings;
-            this._catalogSettings = catalogSettings;
-            this._storeInformationSettings = storeInformationSettings;
-            this._emailAccountSettings = emailAccountSettings;
-            this._commonSettings = commonSettings;
-            this._blogSettings = blogSettings;
-            this._newsSettings = newsSettings;
-            this._forumSettings = forumSettings;
-            this._localizationSettings = localizationSettings;
-            this._captchaSettings = captchaSettings;
-            this._vendorSettings = vendorSettings;
-        }
+        //    this._customerSettings = customerSettings;
+        //    this._taxSettings = taxSettings;
+        //    this._catalogSettings = catalogSettings;
+        //    this._storeInformationSettings = storeInformationSettings;
+        //    this._emailAccountSettings = emailAccountSettings;
+        //    this._commonSettings = commonSettings;
+        //    this._blogSettings = blogSettings;
+        //    this._newsSettings = newsSettings;
+        //    this._forumSettings = forumSettings;
+        //    this._localizationSettings = localizationSettings;
+        //    this._captchaSettings = captchaSettings;
+        //    this._vendorSettings = vendorSettings;
+        //}
 
         #endregion
 
         #region Utilities
 
+        /// <summary>
+        /// 未读短信
+        /// </summary>
+        /// <returns></returns>
         [NonAction]
         protected virtual int GetUnreadPrivateMessages()
         {
