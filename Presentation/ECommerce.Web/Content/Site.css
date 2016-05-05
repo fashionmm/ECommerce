@@ -1,5 +1,5 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 0px; /* padding-top: 50px;*/
     padding-bottom: 20px;
 }
 
@@ -17,8 +17,32 @@
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
+/*input,
 select,
 textarea {
     max-width: 280px;
+}*/
+
+.spacer{
+    width:1px;
+    height:30px;
+    margin-top:10px;
+    background:#ccc;
+    overflow:hidden;
+}
+
+.btn-width{
+    width:100px;
+}
+
+.menu {
+    height: 50px;
+    background: #ff0000;
+    font-size: 16px;
+    line-height:50px;
+    font-weight: bold;
+}
+
+.menu li{
+    color:#ffffff;
 }

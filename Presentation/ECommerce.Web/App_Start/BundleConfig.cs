@@ -21,10 +21,12 @@ namespace ECommerce.Web
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                       "~/Scripts/swiper.jquery.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                       "~/Content/swiper/swiper.css",
                       "~/Content/site.css"));
         }
     }
