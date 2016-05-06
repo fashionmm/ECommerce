@@ -91,14 +91,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ECommerceDbContext.cs" />
+    <Compile Include="EfRepository.cs" />
     <Compile Include="IDbContext.cs" />
-    <Compile Include="Mapping\Customers\CustomerMap.cs" />
-    <Compile Include="Mapping\ECommerceEntityTypeConfiguration.cs" />
+    <Compile Include="Initializers\Mapping\Customers\CustomerMap.cs" />
+    <Compile Include="Initializers\Mapping\ECommerceEntityTypeConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Initializers\" />
-    <Folder Include="Mapping\Products\" />
+    <Folder Include="Initializers\Mapping\Products\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

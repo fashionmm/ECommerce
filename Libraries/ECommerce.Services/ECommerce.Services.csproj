@@ -80,6 +80,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\IGenericAttributeService.cs" />
+    <Compile Include="Customers\CustomerService.cs" />
+    <Compile Include="Customers\ICustomerService.cs" />
     <Compile Include="Localization\ILanguageService.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\LoggingExtensions.cs" />
@@ -94,6 +96,10 @@
     <ProjectReference Include="..\ECommerce.Core\ECommerce.Core.csproj">
       <Project>{c8a9c620-8784-47aa-8285-f2db4b3125df}</Project>
       <Name>ECommerce.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ECommerce.Data\ECommerce.Data.csproj">
+      <Project>{c6d8d3af-41f0-413a-9c65-ef550d2103f3}</Project>
+      <Name>ECommerce.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
