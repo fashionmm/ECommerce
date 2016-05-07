@@ -36,7 +36,7 @@ namespace ECommerce.Core.Infrastructure.DependencyManagement
         }
 
         /// <summary>
-        /// Resolve
+        /// 解析
         /// </summary>
         /// <typeparam name="T">Type</typeparam>
         /// <param name="key">key</param>

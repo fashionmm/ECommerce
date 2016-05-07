@@ -4,7 +4,7 @@ using ECommerce.Core.Configuration;
 namespace ECommerce.Core.Infrastructure.DependencyManagement
 {
     /// <summary>
-    /// Dependency registrar interface
+    /// 依赖注册接口
     /// </summary>
     public interface IDependencyRegistrar
     {
@@ -17,7 +17,7 @@ namespace ECommerce.Core.Infrastructure.DependencyManagement
         void Register(ContainerBuilder builder, ITypeFinder typeFinder, NopConfig config);
 
         /// <summary>
-        /// Order of this dependency registrar implementation
+        /// 依赖注册实现顺序号
         /// </summary>
         int Order { get; }
     }
