@@ -1,4 +1,6 @@
-﻿using ECommerce.Web.Framework.Mvc;
+﻿using FluentValidation.Attributes;
+using ECommerce.Web.Framework.Mvc;
+using ECommerce.Web.Validators.Customer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,6 +9,7 @@ using System.Web;
 
 namespace ECommerce.Web.Models.Customer
 {
+    [Validator(typeof(RegisterValidator))]
     public partial class RegisterModel : BaseECModel
     {
         public RegisterModel()
