@@ -8,9 +8,8 @@ using System.Text.RegularExpressions;
 namespace ECommerce.Core.Infrastructure
 {
     /// <summary>
-    /// A class that finds types needed by Nop by looping assemblies in the 
-    /// currently executing AppDomain. Only assemblies whose names matches
-    /// certain patterns are investigated and an optional list of assemblies
+    ///在当前执行的应用程序域中，通过NOP遍历程序集查找类型。
+    ///仅仅名称与特定模式匹配的程序集被检查和可选的程序集列表。
     /// referenced by <see cref="AssemblyNames"/> are always investigated.
     /// </summary>
     public class AppDomainTypeFinder : ITypeFinder
@@ -27,7 +26,7 @@ namespace ECommerce.Core.Infrastructure
 
         #region Properties
 
-        /// <summary>The app domain to look for types in.</summary>
+        /// <summary>当前应用程序域</summary>
         public virtual AppDomain App
         {
             get { return AppDomain.CurrentDomain; }

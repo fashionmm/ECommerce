@@ -11,7 +11,7 @@ using System.Web.Mvc;
 namespace ECommerce.Core.Infrastructure
 {
     /// <summary>
-    /// Engine
+    /// E引擎实现
     /// </summary>
     public class ECEngine : IEngine
     {
@@ -40,7 +40,7 @@ namespace ECommerce.Core.Infrastructure
         }
 
         /// <summary>
-        /// Register dependencies
+        /// 注册依赖
         /// </summary>
         /// <param name="config">Config</param>
         protected virtual void RegisterDependencies(NopConfig config)
@@ -49,15 +49,15 @@ namespace ECommerce.Core.Infrastructure
             var container = builder.Build();
             this._containerManager = new ContainerManager(container);
 
-            //we create new instance of ContainerBuilder
-            //because Build() or Update() method can only be called once on a ContainerBuilder.
+            //创造containerbuilder新实例
+            //在一个containerbuilder，因为build()或update()方法只能调用一次。
 
             //dependencies
-            var typeFinder = new WebAppTypeFinder();
+            var typeFinder = new WebAppTypeFinder(); 
             builder = new ContainerBuilder();
-            builder.RegisterInstance(config).As<NopConfig>().SingleInstance();
-            builder.RegisterInstance(this).As<IEngine>().SingleInstance();
-            builder.RegisterInstance(typeFinder).As<ITypeFinder>().SingleInstance();
+            builder.RegisterInstance(config).As<NopConfig>().SingleInstance(); //注册config单例
+            builder.RegisterInstance(this).As<IEngine>().SingleInstance();    //注册单例ECEngine
+            builder.RegisterInstance(typeFinder).As<ITypeFinder>().SingleInstance();//注册WebAppTypeFinder
             builder.Update(container);
 
             //register dependencies provided by other assemblies
@@ -81,7 +81,7 @@ namespace ECommerce.Core.Infrastructure
         #region Methods
 
         /// <summary>
-        /// Initialize components and plugins in the nop environment.
+        /// 在E环境中，初始化组建和插件。
         /// </summary>
         /// <param name="config">Config</param>
         public void Initialize(NopConfig config)
@@ -98,7 +98,7 @@ namespace ECommerce.Core.Infrastructure
         }
 
         /// <summary>
-        /// Resolve dependency
+        /// 解析依赖
         /// </summary>
         /// <typeparam name="T">T</typeparam>
         /// <returns></returns>
@@ -118,7 +118,7 @@ namespace ECommerce.Core.Infrastructure
         }
 
         /// <summary>
-        /// Resolve dependencies
+        /// 解析所有依赖
         /// </summary>
         /// <typeparam name="T">T</typeparam>
         /// <returns></returns>
@@ -132,7 +132,7 @@ namespace ECommerce.Core.Infrastructure
         #region Properties
 
         /// <summary>
-        /// Container manager
+        /// 获取容器管理
         /// </summary>
         public ContainerManager ContainerManager
         {

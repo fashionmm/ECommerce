@@ -62,3 +62,13 @@ E:\ECommerce\Libraries\ECommerce.Services\bin\Debug\zh-Hans\System.Web.WebPages.
 E:\ECommerce\Libraries\ECommerce.Services\obj\Debug\ECommerce.Services.csprojResolveAssemblyReference.cache
 E:\ECommerce\Libraries\ECommerce.Services\obj\Debug\ECommerce.Services.dll
 E:\ECommerce\Libraries\ECommerce.Services\obj\Debug\ECommerce.Services.pdb
+E:\ECommerce\Libraries\ECommerce.Services\bin\Debug\ECommerce.Data.dll
+E:\ECommerce\Libraries\ECommerce.Services\bin\Debug\StackExchange.Redis.StrongName.dll
+E:\ECommerce\Libraries\ECommerce.Services\bin\Debug\Newtonsoft.Json.dll
+E:\ECommerce\Libraries\ECommerce.Services\bin\Debug\EntityFramework.dll
+E:\ECommerce\Libraries\ECommerce.Services\bin\Debug\ECommerce.Data.pdb
+E:\ECommerce\Libraries\ECommerce.Services\bin\Debug\StackExchange.Redis.StrongName.pdb
+E:\ECommerce\Libraries\ECommerce.Services\bin\Debug\StackExchange.Redis.StrongName.xml
+E:\ECommerce\Libraries\ECommerce.Services\bin\Debug\Newtonsoft.Json.xml
+E:\ECommerce\Libraries\ECommerce.Services\bin\Debug\EntityFramework.xml
+E:\ECommerce\Libraries\ECommerce.Services\bin\Debug\zh-Hans\EntityFramework.resources.dll

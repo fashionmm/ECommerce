@@ -79,3 +79,8 @@ E:\ECommerce\Libraries\ECommerce.Data\bin\Debug\zh-Hans\System.Web.WebPages.Razo
 E:\ECommerce\Libraries\ECommerce.Data\obj\Debug\ECommerce.Data.csprojResolveAssemblyReference.cache
 E:\ECommerce\Libraries\ECommerce.Data\obj\Debug\ECommerce.Data.dll
 E:\ECommerce\Libraries\ECommerce.Data\obj\Debug\ECommerce.Data.pdb
+E:\ECommerce\Libraries\ECommerce.Data\bin\Debug\StackExchange.Redis.StrongName.dll
+E:\ECommerce\Libraries\ECommerce.Data\bin\Debug\Newtonsoft.Json.dll
+E:\ECommerce\Libraries\ECommerce.Data\bin\Debug\StackExchange.Redis.StrongName.pdb
+E:\ECommerce\Libraries\ECommerce.Data\bin\Debug\StackExchange.Redis.StrongName.xml
+E:\ECommerce\Libraries\ECommerce.Data\bin\Debug\Newtonsoft.Json.xml

@@ -87,7 +87,10 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Localization\ILocalizedModel.cs" />
     <Compile Include="Localization\ILocalizedModelLocal.cs" />
+    <Compile Include="Localization\LocalizedRoute.cs" />
+    <Compile Include="Localization\LocalizedRouteExtensions.cs" />
     <Compile Include="Localization\LocalizedString.cs" />
+    <Compile Include="Localization\LocalizedUrlExtenstions.cs" />
     <Compile Include="Localization\Localizer.cs" />
     <Compile Include="Mvc\BaseECModel.cs" />
     <Compile Include="Mvc\ECModelBinder.cs" />

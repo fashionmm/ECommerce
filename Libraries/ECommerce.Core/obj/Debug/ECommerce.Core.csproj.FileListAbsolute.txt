@@ -55,6 +55,10 @@ E:\ECommerce\Libraries\ECommerce.Core\bin\Debug\zh-Hans\System.Web.Razor.resourc
 E:\ECommerce\Libraries\ECommerce.Core\bin\Debug\zh-Hans\System.Web.WebPages.resources.dll
 E:\ECommerce\Libraries\ECommerce.Core\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 E:\ECommerce\Libraries\ECommerce.Core\bin\Debug\zh-Hans\System.Web.WebPages.Razor.resources.dll
-E:\ECommerce\Libraries\ECommerce.Core\obj\Debug\ECommerce.Core.csprojResolveAssemblyReference.cache
 E:\ECommerce\Libraries\ECommerce.Core\obj\Debug\ECommerce.Core.dll
 E:\ECommerce\Libraries\ECommerce.Core\obj\Debug\ECommerce.Core.pdb
+E:\ECommerce\Libraries\ECommerce.Core\bin\Debug\Newtonsoft.Json.dll
+E:\ECommerce\Libraries\ECommerce.Core\bin\Debug\StackExchange.Redis.StrongName.dll
+E:\ECommerce\Libraries\ECommerce.Core\bin\Debug\Newtonsoft.Json.xml
+E:\ECommerce\Libraries\ECommerce.Core\bin\Debug\StackExchange.Redis.StrongName.pdb
+E:\ECommerce\Libraries\ECommerce.Core\bin\Debug\StackExchange.Redis.StrongName.xml
