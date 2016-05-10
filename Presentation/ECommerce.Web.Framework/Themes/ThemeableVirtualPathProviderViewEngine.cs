@@ -57,15 +57,9 @@ namespace ECommerce.Web.Framework.Themes
         #endregion
 
         #region 抽象类实现
-        protected override IView CreatePartialView(ControllerContext controllerContext, string partialPath)
-        {
-            throw new NotImplementedException();
-        }
 
-        protected override IView CreateView(ControllerContext controllerContext, string viewPath, string masterPath)
-        {
-            throw new NotImplementedException();
-        }
+     
+
         #endregion
     }
 }

@@ -58,7 +58,7 @@ namespace ECommerce.Web.Framework.Themes
                 }
             }
         }
-        #endregion
+       
 
         private ThemeConfiguration CreateThemeConfiguration(string themePath)
         {
@@ -73,5 +73,7 @@ namespace ECommerce.Web.Framework.Themes
 
             return null;
         }
+
+        #endregion
     }
 }

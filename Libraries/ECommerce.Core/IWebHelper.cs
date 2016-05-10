@@ -13,9 +13,9 @@ namespace ECommerce.Core
     public interface IWebHelper
     {
         /// <summary>
-        /// Get URL referrer
+        /// 获取URL链接
         /// </summary>
-        /// <returns>URL referrer</returns>
+        /// <returns>返回URL链接</returns>
         string GetUrlReferrer();
 
         /// <summary>
