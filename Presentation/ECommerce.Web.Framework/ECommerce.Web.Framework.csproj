@@ -95,6 +95,12 @@
     <Compile Include="Mvc\BaseECModel.cs" />
     <Compile Include="Mvc\ECModelBinder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Themes\IThemeContext.cs" />
+    <Compile Include="Themes\IThemeProvider.cs" />
+    <Compile Include="Themes\ThemeableVirtualPathProviderViewEngine.cs" />
+    <Compile Include="Themes\ThemeConfiguartion.cs" />
+    <Compile Include="Themes\ThemeContext.cs" />
+    <Compile Include="Themes\ThemeProvider.cs" />
     <Compile Include="UI\NotifyType.cs" />
     <Compile Include="Validators\BaseECValidator.cs" />
     <Compile Include="Validators\CreditCardPropertyValidator.cs" />
@@ -114,6 +120,7 @@
       <Name>ECommerce.Services</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

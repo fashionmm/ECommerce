@@ -156,6 +156,7 @@
     <Compile Include="Infrastructure\WebAppTypeFinder.cs" />
     <Compile Include="IPagedList.cs" />
     <Compile Include="IStoreContext.cs" />
+    <Compile Include="IWebHelper.cs" />
     <Compile Include="IWorkContext.cs" />
     <Compile Include="NopException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
