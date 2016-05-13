@@ -55,7 +55,19 @@
       <HintPath>..\..\packages\FluentValidation.6.2.1.0\lib\Net45\FluentValidation.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="FluentValidation.Mvc, Version=6.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentValidation.MVC5.6.2.1.0\lib\Net45\FluentValidation.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MiniProfiler, Version=3.2.0.157, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MiniProfiler.3.2.0.157\lib\net40\MiniProfiler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MiniProfiler.Mvc, Version=3.0.11.0, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MiniProfiler.MVC4.3.0.11\lib\net40\MiniProfiler.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -272,6 +284,10 @@
     <ProjectReference Include="..\..\Libraries\ECommerce.Core\ECommerce.Core.csproj">
       <Project>{c8a9c620-8784-47aa-8285-f2db4b3125df}</Project>
       <Name>ECommerce.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\ECommerce.Services\ECommerce.Services.csproj">
+      <Project>{ebdd152e-c3db-4b82-bf27-2c4f4587ea63}</Project>
+      <Name>ECommerce.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\ECommerce.Web.Framework\ECommerce.Web.Framework.csproj">
       <Project>{794af00b-78a8-4024-9474-809e78415ab2}</Project>
