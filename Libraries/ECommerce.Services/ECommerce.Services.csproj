@@ -82,6 +82,7 @@
     <Compile Include="Common\IGenericAttributeService.cs" />
     <Compile Include="Customers\CustomerService.cs" />
     <Compile Include="Customers\ICustomerService.cs" />
+    <Compile Include="Infrastructure\IMachineNameProvider.cs" />
     <Compile Include="Localization\ILanguageService.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\LoggingExtensions.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Stores\IStoreService.cs" />
     <Compile Include="Tasks\IScheduleTaskService.cs" />
     <Compile Include="Tasks\ITask.cs" />
+    <Compile Include="Tasks\ScheduleTaskService.cs" />
     <Compile Include="Tasks\Task.cs" />
     <Compile Include="Tasks\TaskManager.cs" />
     <Compile Include="Tasks\TaskThread.cs" />
