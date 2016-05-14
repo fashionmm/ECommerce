@@ -102,7 +102,7 @@
     <Compile Include="ComponentModel\GenericListTypeConverter.cs" />
     <Compile Include="ComponentModel\WriteLockDisposable.cs" />
     <Compile Include="Configuration\ISettings.cs" />
-    <Compile Include="Configuration\NopConfig.cs" />
+    <Compile Include="Configuration\EConfig.cs" />
     <Compile Include="Data\BaseDataProviderManager.cs" />
     <Compile Include="Data\DataSettings.cs" />
     <Compile Include="Data\DataSettingsHelper.cs" />
@@ -110,6 +110,8 @@
     <Compile Include="Data\IDataProvider.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Domain\Common\Address.cs" />
+    <Compile Include="Domain\Common\CommonSettings.cs" />
+    <Compile Include="Domain\Common\FulltextSearchMode.cs" />
     <Compile Include="Domain\Common\GenericAttribute.cs" />
     <Compile Include="Domain\Customers\Customer.cs" />
     <Compile Include="Domain\Customers\CustomerExtensions.cs" />
@@ -165,6 +167,7 @@
     <Compile Include="IWorkContext.cs" />
     <Compile Include="NopException.cs" />
     <Compile Include="EVersion.cs" />
+    <Compile Include="PagedList.cs" />
     <Compile Include="Plugins\BasePlugin.cs" />
     <Compile Include="Plugins\IPlugin.cs" />
     <Compile Include="Plugins\PluginDescriptor.cs" />

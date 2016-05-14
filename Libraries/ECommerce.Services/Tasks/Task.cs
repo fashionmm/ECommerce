@@ -72,7 +72,7 @@ namespace ECommerce.Services.Tasks
                 //任务是在一个时间节点运行吗？
                 if (ensureRunOnOneWebFarmInstance)
                 {
-                    var eConfig = EngineContext.Current.ContainerManager.Resolve<NopConfig>("", scope);
+                    var eConfig = EngineContext.Current.ContainerManager.Resolve<EConfig>("", scope);
                     if (eConfig.MultipleInstancesEnabled)
                     {
                         var machineNameProvider = EngineContext.Current.ContainerManager.Resolve<IMachineNameProvider>("", scope);

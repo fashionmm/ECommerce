@@ -23,7 +23,7 @@ namespace ECommerce.Core.Caching
 
         #region Ctor
 
-        public RedisCacheManager(NopConfig config)
+        public RedisCacheManager(EConfig config)
         {
             if (String.IsNullOrEmpty(config.RedisCachingConnectionString))
                 throw  new Exception("Redis connection string is empty");

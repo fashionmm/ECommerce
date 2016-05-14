@@ -90,6 +90,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbContextExtensions.cs" />
     <Compile Include="ECommerceDbContext.cs" />
     <Compile Include="EfRepository.cs" />
     <Compile Include="IDbContext.cs" />

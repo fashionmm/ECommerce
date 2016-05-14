@@ -27,7 +27,7 @@ namespace ECommerce.Core.Infrastructure
             {
                 Singleton<IEngine>.Instance = new ECEngine();
 
-                var config = ConfigurationManager.GetSection("NopConfig") as NopConfig;
+                var config = ConfigurationManager.GetSection("EConfig") as EConfig;
                 Singleton<IEngine>.Instance.Initialize(config);
             }
             return Singleton<IEngine>.Instance;

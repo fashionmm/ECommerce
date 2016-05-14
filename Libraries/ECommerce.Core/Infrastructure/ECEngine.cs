@@ -43,7 +43,7 @@ namespace ECommerce.Core.Infrastructure
         /// 注册依赖
         /// </summary>
         /// <param name="config">Config</param>
-        protected virtual void RegisterDependencies(NopConfig config)
+        protected virtual void RegisterDependencies(EConfig config)
         {
             var builder = new ContainerBuilder();
             var container = builder.Build();
@@ -55,7 +55,7 @@ namespace ECommerce.Core.Infrastructure
             //dependencies
             var typeFinder = new WebAppTypeFinder(); 
             builder = new ContainerBuilder();
-            builder.RegisterInstance(config).As<NopConfig>().SingleInstance(); //注册config单例
+            builder.RegisterInstance(config).As<EConfig>().SingleInstance(); //注册config单例
             builder.RegisterInstance(this).As<IEngine>().SingleInstance();    //注册单例ECEngine
             builder.RegisterInstance(typeFinder).As<ITypeFinder>().SingleInstance();//注册WebAppTypeFinder
             builder.Update(container);
@@ -84,12 +84,12 @@ namespace ECommerce.Core.Infrastructure
         /// 在E环境中，初始化组建和插件。
         /// </summary>
         /// <param name="config">Config</param>
-        public void Initialize(NopConfig config)
+        public void Initialize(EConfig config)
         {
-            //register dependencies
+            //注册依赖
             RegisterDependencies(config);
 
-            //startup tasks
+            //启动任务
             if (!config.IgnoreStartupTasks)
             {
                 RunStartupTasks();

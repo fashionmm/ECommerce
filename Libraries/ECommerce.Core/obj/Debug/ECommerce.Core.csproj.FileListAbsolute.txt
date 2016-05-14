@@ -62,3 +62,4 @@ E:\ECommerce\Libraries\ECommerce.Core\bin\Debug\StackExchange.Redis.StrongName.d
 E:\ECommerce\Libraries\ECommerce.Core\bin\Debug\Newtonsoft.Json.xml
 E:\ECommerce\Libraries\ECommerce.Core\bin\Debug\StackExchange.Redis.StrongName.pdb
 E:\ECommerce\Libraries\ECommerce.Core\bin\Debug\StackExchange.Redis.StrongName.xml
+E:\ECommerce\Libraries\ECommerce.Core\obj\Debug\ECommerce.Core.csprojResolveAssemblyReference.cache

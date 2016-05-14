@@ -15,32 +15,32 @@ namespace ECommerce.Core.Infrastructure
     public interface IEngine
     {
         /// <summary>
-        /// Container manager
+        /// 容器管理器
         /// </summary>
         ContainerManager ContainerManager { get; }
 
         /// <summary>
-        /// Initialize components and plugins in the nop environment.
+        /// 初始化组件和插件
         /// </summary>
         /// <param name="config">Config</param>
-        void Initialize(NopConfig config);
+        void Initialize(EConfig config);
 
         /// <summary>
-        /// Resolve dependency
+        /// 解析
         /// </summary>
         /// <typeparam name="T">T</typeparam>
         /// <returns></returns>
         T Resolve<T>() where T : class;
 
         /// <summary>
-        ///  Resolve dependency
+        ///  解析
         /// </summary>
         /// <param name="type">Type</param>
         /// <returns></returns>
         object Resolve(Type type);
 
         /// <summary>
-        /// Resolve dependencies
+        /// 解析所有
         /// </summary>
         /// <typeparam name="T">T</typeparam>
         /// <returns></returns>
