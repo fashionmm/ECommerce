@@ -14,6 +14,8 @@ using ECommerce.Core.Domain.Tax;
 using ECommerce.Core.Domain.Vendors;
 using ECommerce.Web.Framework;
 using ECommerce.Web.Framework.Localization;
+using ECommerce.Core.Caching;
+using ECommerce.Services.Localization;
 
 
 namespace ECommerce.Web.Controllers
@@ -26,7 +28,7 @@ namespace ECommerce.Web.Controllers
         //private readonly IProductService _productService;
         //private readonly IManufacturerService _manufacturerService;
         //private readonly ITopicService _topicService;
-        //private readonly ILanguageService _languageService;
+        private readonly ILanguageService _languageService;
         //private readonly ICurrencyService _currencyService;
         //private readonly ILocalizationService _localizationService;
         private readonly IWorkContext _workContext;
@@ -40,7 +42,7 @@ namespace ECommerce.Web.Controllers
         //private readonly IGenericAttributeService _genericAttributeService;
         //private readonly IWebHelper _webHelper;
         //private readonly IPermissionService _permissionService;
-        //private readonly ICacheManager _cacheManager;
+          private readonly ICacheManager _cacheManager;
         //private readonly ICustomerActivityService _customerActivityService;
         //private readonly IVendorService _vendorService;
 
@@ -162,7 +164,7 @@ namespace ECommerce.Web.Controllers
 
         #region Methods
 
-        //page not found
+        //页面未找到
         public ActionResult PageNotFound()
         {
             this.Response.StatusCode = 404;
@@ -171,7 +173,7 @@ namespace ECommerce.Web.Controllers
             return View();
         }
 
-        //language
+        //语言选择
         [ChildActionOnly]
         public ActionResult LanguageSelector()
         {

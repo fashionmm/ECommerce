@@ -100,7 +100,7 @@ namespace ECommerce.Core.Data
         /// <summary>
         ///装载设置
         /// </summary>
-        /// <param name="filePath">文件路径;默认设置为null。 pass null to use default settings file path</param>
+        /// <param name="filePath">文件路径;默认设置为null。</param>
         /// <returns></returns>
         public virtual DataSettings LoadSettings(string filePath = null)
         {

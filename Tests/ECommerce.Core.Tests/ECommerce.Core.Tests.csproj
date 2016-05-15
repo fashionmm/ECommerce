@@ -54,10 +54,17 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Data\DataSettingsManagerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\ECommerce.Core\ECommerce.Core.csproj">
+      <Project>{C8A9C620-8784-47AA-8285-F2DB4B3125DF}</Project>
+      <Name>ECommerce.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

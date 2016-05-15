@@ -4,6 +4,7 @@ using ECommerce.Core.Domain;
 using ECommerce.Core.Infrastructure;
 using ECommerce.Services.Logging;
 using ECommerce.Services.Tasks;
+using ECommerce.Web.Controllers;
 using ECommerce.Web.Framework;
 using ECommerce.Web.Framework.Mvc;
 using ECommerce.Web.Framework.Themes;
