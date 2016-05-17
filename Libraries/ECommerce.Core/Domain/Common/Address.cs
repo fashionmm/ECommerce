@@ -7,7 +7,7 @@ using System.Text;
 
 namespace ECommerce.Core.Domain.Common
 {
-    public partial class Address
+    public partial class Address:BaseEntity,ICloneable
     {
         /// <summary>
         /// 获取或设置第一个名字
@@ -90,6 +90,10 @@ namespace ECommerce.Core.Domain.Common
         public virtual StateProvince StateProvince { get; set; }
 
 
+        /// <summary>
+        /// 克隆复制对象
+        /// </summary>
+        /// <returns></returns>
         public object Clone()
         {
             var addr = new Address

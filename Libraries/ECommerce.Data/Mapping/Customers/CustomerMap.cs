@@ -16,7 +16,19 @@ namespace ECommerce.Data.Mapping.Customers
             this.Property(c=>c.UserName).HasMaxLength(200);
             this.Property(c => c.Email).HasMaxLength(200);
             this.Property(c => c.SystemName).HasMaxLength(100);
+         
+            this.Ignore(c => c.PasswordFormat);
 
+            //this.HasMany(c => c.CustomerRoles)
+            //    .WithMany()
+            //    .Map(m => m.ToTable("Customer_CustomerRole"));
+
+            
+            this.HasMany(c => c.Addresses)
+                .WithMany()
+                .Map(m => m.ToTable("Customer_Addresses"));
+            this.HasOptional(c => c.BillingAddress);
+            this.HasOptional(c => c.ShippingAddress);
         }
     }
 }
