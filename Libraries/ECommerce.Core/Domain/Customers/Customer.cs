@@ -132,43 +132,43 @@ namespace ECommerce.Core.Domain.Customers
         /// </summary>
         public DateTime LastActivityDateUtc { get; set; }
 
-        #region Navigation properties
+        #region 导航属性
 
         /// <summary>
         /// 获取或设置客户生成内容
         /// </summary>
-        public virtual ICollection<ExternalAuthenticationRecord> ExternalAuthenticationRecords
-        {
-            get { return _externalAuthenticationRecords ?? (_externalAuthenticationRecords = new List<ExternalAuthenticationRecord>()); }
-            protected set { _externalAuthenticationRecords = value; }
-        }
+        //public virtual ICollection<ExternalAuthenticationRecord> ExternalAuthenticationRecords
+        //{
+        //    get { return _externalAuthenticationRecords ?? (_externalAuthenticationRecords = new List<ExternalAuthenticationRecord>()); }
+        //    protected set { _externalAuthenticationRecords = value; }
+        //}
 
         /// <summary>
         /// 获取或设置客户角色
         /// </summary>
-        public virtual ICollection<CustomerRole> CustomerRoles
-        {
-            get { return _customerRoles ?? (_customerRoles = new List<CustomerRole>()); }
-            protected set { _customerRoles = value; }
-        }
+        //public virtual ICollection<CustomerRole> CustomerRoles
+        //{
+        //    get { return _customerRoles ?? (_customerRoles = new List<CustomerRole>()); }
+        //    protected set { _customerRoles = value; }
+        //}
 
         /// <summary>
         /// 获取或设置的购物车中的商品
         /// </summary>
-        public virtual ICollection<ShoppingCartItem> ShoppingCartItems
-        {
-            get { return _shoppingCartItems ?? (_shoppingCartItems = new List<ShoppingCartItem>()); }
-            protected set { _shoppingCartItems = value; }
-        }
+        //public virtual ICollection<ShoppingCartItem> ShoppingCartItems
+        //{
+        //    get { return _shoppingCartItems ?? (_shoppingCartItems = new List<ShoppingCartItem>()); }
+        //    protected set { _shoppingCartItems = value; }
+        //}
 
-        /// <summary>
-        /// 获取或设置此客户退货请求
-        /// </summary>
-        public virtual ICollection<ReturnRequest> ReturnRequests
-        {
-            get { return _returnRequests ?? (_returnRequests = new List<ReturnRequest>()); }
-            protected set { _returnRequests = value; }
-        }
+        ///// <summary>
+        ///// 获取或设置此客户退货请求
+        ///// </summary>
+        //public virtual ICollection<ReturnRequest> ReturnRequests
+        //{
+        //    get { return _returnRequests ?? (_returnRequests = new List<ReturnRequest>()); }
+        //    protected set { _returnRequests = value; }
+        //}
 
         /// <summary>
         /// 默认的帐单地址

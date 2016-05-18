@@ -8,5 +8,16 @@ namespace ECommerce.Web.Framework.Themes
 {
    public partial class ThemeContext:IThemeContext
     {
+        public string WorkingThemeName
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }

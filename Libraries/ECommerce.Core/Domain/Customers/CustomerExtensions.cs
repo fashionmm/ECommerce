@@ -23,9 +23,9 @@ namespace ECommerce.Core.Domain.Customers
 
             if (String.IsNullOrEmpty(customerRoleSystemName))
                 throw new ArgumentNullException("customerRoleSystemName");
-
-            var result = customer.CustomerRoles
-                .FirstOrDefault(cr => (!onlyActiveCustomerRoles || cr.Active) && (cr.SystemName == customerRoleSystemName)) != null;
+            var result = false;
+            //var result = customer.CustomerRoles
+            //    .FirstOrDefault(cr => (!onlyActiveCustomerRoles || cr.Active) && (cr.SystemName == customerRoleSystemName)) != null;
             return result;
         }
 

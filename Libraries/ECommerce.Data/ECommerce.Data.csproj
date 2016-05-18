@@ -97,6 +97,11 @@
     <Compile Include="Mapping\Common\AddressMap.cs" />
     <Compile Include="Mapping\Customers\CustomerMap.cs" />
     <Compile Include="Mapping\ECommerceEntityTypeConfiguration.cs" />
+    <Compile Include="Migrations\201605180924295_InitialCreate.cs" />
+    <Compile Include="Migrations\201605180924295_InitialCreate.Designer.cs">
+      <DependentUpon>201605180924295_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -104,7 +109,9 @@
     <Folder Include="Mapping\Products\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +119,11 @@
       <Project>{c8a9c620-8784-47aa-8285-f2db4b3125df}</Project>
       <Name>ECommerce.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201605180924295_InitialCreate.resx">
+      <DependentUpon>201605180924295_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

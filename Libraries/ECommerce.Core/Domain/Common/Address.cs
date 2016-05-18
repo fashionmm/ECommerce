@@ -79,17 +79,18 @@ namespace ECommerce.Core.Domain.Common
         /// </summary>
         public DateTime CreatedOnUtc { get; set; }
 
+        #region 导航属性
         /// <summary>
         /// 获取或设置国家
         /// </summary>
-        public virtual Country Country { get; set; }
+      // public virtual Country Country { get; set; }
 
         /// <summary>
         /// 获取或设置该州/省
         /// </summary>
-        public virtual StateProvince StateProvince { get; set; }
+       //  public virtual StateProvince StateProvince { get; set; }
 
-
+        #endregion
         /// <summary>
         /// 克隆复制对象
         /// </summary>
@@ -102,9 +103,9 @@ namespace ECommerce.Core.Domain.Common
                 LastName = this.LastName,
                 Email = this.Email,
                 Company = this.Company,
-                Country = this.Country,
+              //  Country = this.Country,
                 CountryId = this.CountryId,
-                StateProvince = this.StateProvince,
+            //    StateProvince = this.StateProvince,
                 StateProvinceId = this.StateProvinceId,
                 City = this.City,
                 Address1 = this.Address1,

@@ -88,3 +88,10 @@ E:\ECommerce\Presentation\ECommerce.Web.Framework\bin\Debug\ru\FluentValidation.
 E:\ECommerce\Presentation\ECommerce.Web.Framework\bin\Debug\sv\FluentValidation.resources.dll
 E:\ECommerce\Presentation\ECommerce.Web.Framework\bin\Debug\tr\FluentValidation.resources.dll
 E:\ECommerce\Presentation\ECommerce.Web.Framework\bin\Debug\zh-CN\FluentValidation.resources.dll
+E:\ECommerce\Presentation\ECommerce.Web.Framework\bin\Debug\FluentValidation.Mvc.dll
+E:\ECommerce\Presentation\ECommerce.Web.Framework\bin\Debug\ECommerce.Data.dll
+E:\ECommerce\Presentation\ECommerce.Web.Framework\bin\Debug\EntityFramework.dll
+E:\ECommerce\Presentation\ECommerce.Web.Framework\bin\Debug\FluentValidation.Mvc.pdb
+E:\ECommerce\Presentation\ECommerce.Web.Framework\bin\Debug\ECommerce.Data.pdb
+E:\ECommerce\Presentation\ECommerce.Web.Framework\bin\Debug\EntityFramework.xml
+E:\ECommerce\Presentation\ECommerce.Web.Framework\bin\Debug\zh-Hans\EntityFramework.resources.dll

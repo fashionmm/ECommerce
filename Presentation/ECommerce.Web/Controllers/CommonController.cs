@@ -204,9 +204,9 @@ namespace ECommerce.Web.Controllers
             return PartialView(model);
         }
         //available even when a store is closed
-        [StoreClosed(true)]
+       // [StoreClosed(true)]
         //available even when navigation is not allowed
-        [PublicStoreAllowNavigation(true)]
+      //  [PublicStoreAllowNavigation(true)]
         public ActionResult SetLanguage(int langid, string returnUrl = "")
         {
             var language = _languageService.GetLanguageById(langid);

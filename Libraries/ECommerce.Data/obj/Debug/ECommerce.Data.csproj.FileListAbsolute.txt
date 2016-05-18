@@ -84,3 +84,5 @@ E:\ECommerce\Libraries\ECommerce.Data\bin\Debug\Newtonsoft.Json.dll
 E:\ECommerce\Libraries\ECommerce.Data\bin\Debug\StackExchange.Redis.StrongName.pdb
 E:\ECommerce\Libraries\ECommerce.Data\bin\Debug\StackExchange.Redis.StrongName.xml
 E:\ECommerce\Libraries\ECommerce.Data\bin\Debug\Newtonsoft.Json.xml
+E:\ECommerce\Libraries\ECommerce.Data\obj\Debug\ECommerce.Data.Migrations.InitialCreate.resources
+E:\ECommerce\Libraries\ECommerce.Data\obj\Debug\ECommerce.Data.csproj.GenerateResource.Cache

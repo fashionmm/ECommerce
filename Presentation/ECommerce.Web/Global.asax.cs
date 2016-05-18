@@ -1,6 +1,7 @@
 ﻿using ECommerce.Core;
 using ECommerce.Core.Data;
 using ECommerce.Core.Domain;
+using ECommerce.Core.Domain.Common;
 using ECommerce.Core.Infrastructure;
 using ECommerce.Services.Logging;
 using ECommerce.Services.Tasks;
@@ -159,7 +160,7 @@ namespace ECommerce.Web
                     Response.TrySkipIisCustomErrors = true;
 
                     // Call target Controller and pass the routeData.
-                    IController errorController = EngineContext.Current.Resolve<CommonController>();
+                    IController errorController = EngineContext.Current.Resolve<Commmon1Controller>();
 
                     var routeData = new RouteData();
                     routeData.Values.Add("controller", "Common");

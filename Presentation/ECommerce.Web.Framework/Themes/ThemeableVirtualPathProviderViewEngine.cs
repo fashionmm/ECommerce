@@ -8,6 +8,7 @@ using System.Web.Routing;
 using ECommerce.Core.Infrastructure;
 using System.Globalization;
 using System.Web.WebPages;
+using System.Web;
 
 namespace ECommerce.Web.Framework.Themes
 {
@@ -23,6 +24,7 @@ namespace ECommerce.Web.Framework.Themes
         private const string CacheKeyPrefixView = "View";
         private static readonly string[] _emptyLocations = new string[0];
 
+        internal Func<string, string> GetExtensionThunk = VirtualPathUtility.GetExtension;
         #endregion
 
         #region 方法与工具
@@ -339,7 +341,7 @@ namespace ECommerce.Web.Framework.Themes
             else
             {
                 // get rid of the '.' because the FileExtensions property expects extensions withouth a dot.
-                string extension = GetExtensionThunk(virtualPath).TrimStart('.');
+               string extension = GetExtensionThunk(virtualPath).TrimStart('.');
                 return FileExtensions.Contains(extension, StringComparer.OrdinalIgnoreCase);
             }
         }
