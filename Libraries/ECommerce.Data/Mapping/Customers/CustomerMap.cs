@@ -19,9 +19,9 @@ namespace ECommerce.Data.Mapping.Customers
          
             this.Ignore(c => c.PasswordFormat);
 
-            //this.HasMany(c => c.CustomerRoles)
-            //    .WithMany()
-            //    .Map(m => m.ToTable("Customer_CustomerRole"));
+            this.HasMany(c => c.CustomerRoles)
+                .WithMany()
+                .Map(m => m.ToTable("Customer_CustomerRole"));
 
             
             this.HasMany(c => c.Addresses)

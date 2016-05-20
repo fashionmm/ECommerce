@@ -96,6 +96,7 @@
     <Compile Include="IDbContext.cs" />
     <Compile Include="Mapping\Common\AddressMap.cs" />
     <Compile Include="Mapping\Customers\CustomerMap.cs" />
+    <Compile Include="Mapping\Customers\CustomerRoleMap.cs" />
     <Compile Include="Mapping\ECommerceEntityTypeConfiguration.cs" />
     <Compile Include="Migrations\201605180924295_InitialCreate.cs" />
     <Compile Include="Migrations\201605180924295_InitialCreate.Designer.cs">

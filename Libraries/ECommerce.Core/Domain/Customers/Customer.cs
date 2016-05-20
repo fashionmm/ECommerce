@@ -146,11 +146,11 @@ namespace ECommerce.Core.Domain.Customers
         /// <summary>
         /// 获取或设置客户角色
         /// </summary>
-        //public virtual ICollection<CustomerRole> CustomerRoles
-        //{
-        //    get { return _customerRoles ?? (_customerRoles = new List<CustomerRole>()); }
-        //    protected set { _customerRoles = value; }
-        //}
+        public virtual ICollection<CustomerRole> CustomerRoles
+        {
+            get { return _customerRoles ?? (_customerRoles = new List<CustomerRole>()); }
+            protected set { _customerRoles = value; }
+        }
 
         /// <summary>
         /// 获取或设置的购物车中的商品
