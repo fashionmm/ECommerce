@@ -13,6 +13,9 @@ namespace ECommerce.Data.Mapping.Customers
         {
             this.ToTable("CustomerRole");
             this.HasKey(r=>r.Id);
+            this.Property(r=>r.Name).IsRequired().HasMaxLength(255);
+            this.Property(r => r.SystemName).HasMaxLength(255);
+          
         }
     }
 }

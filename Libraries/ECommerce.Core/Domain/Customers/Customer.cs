@@ -135,13 +135,13 @@ namespace ECommerce.Core.Domain.Customers
         #region 导航属性
 
         /// <summary>
-        /// 获取或设置客户生成内容
+        /// 获取或设置客户身份认证记录
         /// </summary>
-        //public virtual ICollection<ExternalAuthenticationRecord> ExternalAuthenticationRecords
-        //{
-        //    get { return _externalAuthenticationRecords ?? (_externalAuthenticationRecords = new List<ExternalAuthenticationRecord>()); }
-        //    protected set { _externalAuthenticationRecords = value; }
-        //}
+        public virtual ICollection<ExternalAuthenticationRecord> ExternalAuthenticationRecords
+        {
+            get { return _externalAuthenticationRecords ?? (_externalAuthenticationRecords = new List<ExternalAuthenticationRecord>()); }
+            protected set { _externalAuthenticationRecords = value; }
+        }
 
         /// <summary>
         /// 获取或设置客户角色

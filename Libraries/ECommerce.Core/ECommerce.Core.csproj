@@ -110,6 +110,7 @@
     <Compile Include="Data\IDataProvider.cs" />
     <Compile Include="Data\IRepository.cs" />
     <Compile Include="Domain\Catalog\AttributeControlType.cs" />
+    <Compile Include="Domain\Catalog\Product.cs" />
     <Compile Include="Domain\Common\Address.cs" />
     <Compile Include="Domain\Common\AddressAttribute.cs" />
     <Compile Include="Domain\Common\AddressAttributeValue.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Domain\Orders\ReturnRequest.cs" />
     <Compile Include="Domain\Orders\ReturnRequestStatus.cs" />
     <Compile Include="Domain\Orders\ShoppingCartItem.cs" />
+    <Compile Include="Domain\Orders\ShoppingCartType.cs" />
     <Compile Include="Domain\Security\PermissionRecord.cs" />
     <Compile Include="Domain\Seo\ISlugSupported.cs" />
     <Compile Include="Domain\Shipping\ShippingMethod.cs" />

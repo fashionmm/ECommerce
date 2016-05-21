@@ -98,6 +98,7 @@
     <Compile Include="Mapping\Customers\CustomerMap.cs" />
     <Compile Include="Mapping\Customers\CustomerRoleMap.cs" />
     <Compile Include="Mapping\ECommerceEntityTypeConfiguration.cs" />
+    <Compile Include="Mapping\Security\PermissionRecordMap.cs" />
     <Compile Include="Migrations\201605180924295_InitialCreate.cs" />
     <Compile Include="Migrations\201605180924295_InitialCreate.Designer.cs">
       <DependentUpon>201605180924295_InitialCreate.cs</DependentUpon>
