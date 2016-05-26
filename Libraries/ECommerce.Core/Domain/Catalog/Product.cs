@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ECommerce.Core.Domain.Discounts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,30 @@ namespace ECommerce.Core.Domain.Catalog
     /// </summary>
     public partial class Product : BaseEntity
     {
+
+        #region 字段
+        private ICollection<ProductCategory> _productCategories;
+
+        private ICollection<ProductManufacturer> _productManufacturers;
+
+        private ICollection<ProductPicture> _productPictures;
+
+        private ICollection<ProductReview> _productReviews;
+
+        private ICollection<ProductSpecificationAttribute> _productSpecificationAttributes;
+
+        private ICollection<ProductTag> _productTags;
+
+        private ICollection<ProductAttributeMapping> _productAttributeMappings;
+
+        private ICollection<ProductAttributeCombination> _productAttributeCombinations;
+
+        private ICollection<TierPrice> _tierPrices;
+
+        private ICollection<Discount> _appliedDiscounts;
+
+        private ICollection<ProductWarehouseInventory> _productWarehouseInventory;
+        #endregion
         /// <summary>
         /// 获取或设置商品类型标识
         /// </summary>
@@ -494,7 +519,7 @@ namespace ECommerce.Core.Domain.Catalog
         /// </summary>
         public DateTime UpdatedOnUtc { get; set; }
 
-/// <summary>
+        /// <summary>
         /// 获取或设置产品类型
         /// </summary>
         public ProductType ProductType
@@ -624,7 +649,7 @@ namespace ECommerce.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the collection of ProductManufacturer
+        /// 获取或设置产品制造商集合
         /// </summary>
         public virtual ICollection<ProductManufacturer> ProductManufacturers
         {
@@ -687,7 +712,7 @@ namespace ECommerce.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the tier prices
+        /// 获取或设置层的价格
         /// </summary>
         public virtual ICollection<TierPrice> TierPrices
         {
@@ -696,16 +721,17 @@ namespace ECommerce.Core.Domain.Catalog
         }
 
         /// <summary>
-        /// Gets or sets the collection of applied discounts
+        /// 获取或设置应用折扣集合
         /// </summary>
         public virtual ICollection<Discount> AppliedDiscounts
         {
             get { return _appliedDiscounts ?? (_appliedDiscounts = new List<Discount>()); }
             protected set { _appliedDiscounts = value; }
         }
-        
+
         /// <summary>
-        /// Gets or sets the collection of "ProductWarehouseInventory" records. We use it only when "UseMultipleWarehouses" is set to "true" and ManageInventoryMethod" to "ManageStock"
+        ///获取或设置集合”产品仓库库存”记录。
+        /// 当“usemultiplewarehouses”设置为“真”和manageinventorymethod”为“managestock”时，被使用。
         /// </summary>
         public virtual ICollection<ProductWarehouseInventory> ProductWarehouseInventory
         {
@@ -715,5 +741,5 @@ namespace ECommerce.Core.Domain.Catalog
     }
 
 
-    
+
 }
