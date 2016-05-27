@@ -155,11 +155,11 @@ namespace ECommerce.Core.Domain.Customers
         /// <summary>
         /// 获取或设置的购物车中的商品
         /// </summary>
-        //public virtual ICollection<ShoppingCartItem> ShoppingCartItems
-        //{
-        //    get { return _shoppingCartItems ?? (_shoppingCartItems = new List<ShoppingCartItem>()); }
-        //    protected set { _shoppingCartItems = value; }
-        //}
+        public virtual ICollection<ShoppingCartItem> ShoppingCartItems
+        {
+            get { return _shoppingCartItems ?? (_shoppingCartItems = new List<ShoppingCartItem>()); }
+            protected set { _shoppingCartItems = value; }
+        }
 
         ///// <summary>
         ///// 获取或设置此客户退货请求

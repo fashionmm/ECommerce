@@ -19,25 +19,25 @@ namespace ECommerce.Services.Customers
         /// <summary>
         /// 获取所有顾客
         /// </summary>
-        /// <param name="createdFromUtc">Created date from (UTC); null to load all records</param>
-        /// <param name="createdToUtc">Created date to (UTC); null to load all records</param>
-        /// <param name="affiliateId">Affiliate identifier</param>
-        /// <param name="vendorId">Vendor identifier</param>
+        /// <param name="createdFromUtc">创建起始日期; 为空加载全部记录</param>
+        /// <param name="createdToUtc">创建截止日期; 为空加载全部记录</param>
+        /// <param name="affiliateId">从属标识符</param>
+        /// <param name="vendorId">供应商标识符</param>
         /// <param name="customerRoleIds">A list of customer role identifiers to filter by (at least one match); pass null or empty list in order to load all customers; </param>
-        /// <param name="email">Email; null to load all customers</param>
-        /// <param name="username">Username; null to load all customers</param>
-        /// <param name="firstName">First name; null to load all customers</param>
-        /// <param name="lastName">Last name; null to load all customers</param>
-        /// <param name="dayOfBirth">Day of birth; 0 to load all customers</param>
-        /// <param name="monthOfBirth">Month of birth; 0 to load all customers</param>
-        /// <param name="company">Company; null to load all customers</param>
-        /// <param name="phone">Phone; null to load all customers</param>
-        /// <param name="zipPostalCode">Phone; null to load all customers</param>
-        /// <param name="loadOnlyWithShoppingCart">Value indicating whether to load customers only with shopping cart</param>
-        /// <param name="sct">Value indicating what shopping cart type to filter; userd when 'loadOnlyWithShoppingCart' param is 'true'</param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
-        /// <returns>Customers</returns>
+        /// <param name="email">邮箱; 为空加载全部</param>
+        /// <param name="username">用户; 为空加载全部</param>
+        /// <param name="firstName">第一名称; 为空加载全部</param>
+        /// <param name="lastName">第二名称; 为空加载全部</param>
+        /// <param name="dayOfBirth">出生日; 0 加载全部</param>
+        /// <param name="monthOfBirth">出生月; 0 加载全部</param>
+        /// <param name="company">公司; 为空加载全部</param>
+        /// <param name="phone">电话; 为空加载全部</param>
+        /// <param name="zipPostalCode">邮编; 为空加载全部</param>
+        /// <param name="loadOnlyWithShoppingCart">一个值，指示是否加载顾客，仅有购物车时。</param>
+        /// <param name="sct">一个值，标识购物车类型，用于过滤。仅当“loadOnlyWithShoppingCartValue”为真时。 </param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
+        /// <returns>顾客分页列表</returns>
         IPagedList<Customer> GetAllCustomers(DateTime? createdFromUtc = null,
             DateTime? createdToUtc = null, int affiliateId = 0, int vendorId = 0,
             int[] customerRoleIds = null, string email = null, string username = null,
@@ -48,20 +48,20 @@ namespace ECommerce.Services.Customers
             int pageIndex = 0, int pageSize = 2147483647); //Int32.MaxValue
 
         /// <summary>
-        /// Gets all customers by customer format (including deleted ones)
+        /// 根据顾客格式，获取所有顾客。（包含被删除的）Gets all customers by customer format (including deleted ones)
         /// </summary>
-        /// <param name="passwordFormat">Password format</param>
-        /// <returns>Customers</returns>
+        /// <param name="passwordFormat">密码格式</param>
+        /// <returns>顾客列表</returns>
         IList<Customer> GetAllCustomersByPasswordFormat(PasswordFormat passwordFormat);
 
         /// <summary>
         ///获取在线顾客
         /// </summary>
-        /// <param name="lastActivityFromUtc">Customer last activity date (from)</param>
-        /// <param name="customerRoleIds">A list of customer role identifiers to filter by (at least one match); pass null or empty list in order to load all customers; </param>
-        /// <param name="pageIndex">Page index</param>
-        /// <param name="pageSize">Page size</param>
-        /// <returns>Customers</returns>
+        /// <param name="lastActivityFromUtc">顾客近期活动开始日期。</param>
+        /// <param name="customerRoleIds">顾客角色标识数组（最近匹配）用于过滤。Null 或 空数组，加载全部。</param>
+        /// <param name="pageIndex">页面索引</param>
+        /// <param name="pageSize">页面大小</param>
+        /// <returns>顾客分页列表</returns>
         IPagedList<Customer> GetOnlineCustomers(DateTime lastActivityFromUtc,
             int[] customerRoleIds, int pageIndex = 0, int pageSize = int.MaxValue);
 
@@ -95,47 +95,47 @@ namespace ECommerce.Services.Customers
         /// <summary>
         /// 根据邮箱，获取顾客对象
         /// </summary>
-        /// <param name="email">Email</param>
-        /// <returns>Customer</returns>
+        /// <param name="email">邮箱</param>
+        /// <returns>顾客</returns>
         Customer GetCustomerByEmail(string email);
 
         /// <summary>
         /// 根据系统名称，获取顾客对象
         /// </summary>
-        /// <param name="systemName">System name</param>
-        /// <returns>Customer</returns>
+        /// <param name="systemName">系统名称</param>
+        /// <returns>顾客</returns>
         Customer GetCustomerBySystemName(string systemName);
 
         /// <summary>
         /// 根据用户名，获取顾客对象
         /// </summary>
-        /// <param name="username">Username</param>
-        /// <returns>Customer</returns>
+        /// <param name="username">用户名</param>
+        /// <returns>顾客</returns>
         Customer GetCustomerByUsername(string username);
 
         /// <summary>
         /// 添加来宾顾客
         /// </summary>
-        /// <returns>Customer</returns>
+        /// <returns>顾客</returns>
         Customer InsertGuestCustomer();
 
         /// <summary>
         /// 添加顾客
         /// </summary>
-        /// <param name="customer">Customer</param>
+        /// <param name="customer">顾客</param>
         void InsertCustomer(Customer customer);
 
         /// <summary>
         /// 更新顾客
         /// </summary>
-        /// <param name="customer">Customer</param>
+        /// <param name="customer">顾客</param>
         void UpdateCustomer(Customer customer);
 
         /// <summary>
         /// 重置数据所需的检验
         /// </summary>
-        /// <param name="customer">Customer</param>
-        /// <param name="storeId">Store identifier</param>
+        /// <param name="customer">顾客</param>
+        /// <param name="storeId">店铺标识</param>
         /// <param name="clearCouponCodes">A value indicating whether to clear coupon code</param>
         /// <param name="clearCheckoutAttributes">A value indicating whether to clear selected checkout attributes</param>
         /// <param name="clearRewardPoints">A value indicating whether to clear "Use reward points" flag</param>

@@ -32,7 +32,7 @@ namespace ECommerce.Core
         }
 
         /// <summary>
-        /// Ctor
+        /// 构造函数
         /// </summary>
         /// <param name="source">source</param>
         /// <param name="pageIndex">Page index</param>
@@ -51,7 +51,7 @@ namespace ECommerce.Core
         }
 
         /// <summary>
-        /// Ctor
+        /// 构造函数
         /// </summary>
         /// <param name="source">source</param>
         /// <param name="pageIndex">Page index</param>

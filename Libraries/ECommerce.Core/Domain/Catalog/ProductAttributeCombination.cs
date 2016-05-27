@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ECommerce.Core.Domain.Catalog
 {
-    class ProductAttributeCombination
+    public partial class ProductAttributeCombination
     {
     }
 }

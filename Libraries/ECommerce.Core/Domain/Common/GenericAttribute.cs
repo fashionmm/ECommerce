@@ -26,7 +26,7 @@ namespace ECommerce.Core.Domain.Common
         public string Value { get; set; }
 
         /// <summary>
-        /// 获取或设置商品标识符
+        /// 获取或设置店铺标识符
         /// </summary>
         public int StoreId { get; set; }
         
