@@ -3,6 +3,7 @@ using ECommerce.Core.Caching;
 using ECommerce.Core.Data;
 using ECommerce.Core.Domain.Customers;
 using ECommerce.Core.Domain.Orders;
+using ECommerce.Services.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,8 +17,41 @@ namespace ECommerce.Services.Customers
     /// </summary>
     public partial class CustomerService : ICustomerService
     {
+        #region  常量
+        /// <summary>
+        /// 缓存键
+        /// </summary>
+        /// <remarks>
+        /// {0}:显示隐藏记录？
+        /// </remarks>
+        private const string CUSTOMERROLES_ALL_KEY = "E.customerrole.all-{0}";
+
+        /// <summary>
+        /// 缓存键
+        /// </summary>
+        /// <remarks>
+        /// {0}:系统名称
+        /// </remarks>
+        private const string CUSTOMERROLES_BY_SYSTEMNAME_KEY = "E.customerrole.systemname-{0}";
+
+        /// <summary>
+        /// 模式匹配清除缓存
+        /// </summary>
+        private const string CUSTOMERROLE_PATTERN_KEY = "E.customerrole.";
+
+        #endregion
+
+        #region 字段
         private readonly IRepository<Customer> _customerRepository;
+
+        private readonly IRepository<CustomerRole> _customerRoleRepostitory;
+
+
         private readonly ICacheManager _cacheManager;
+        private readonly IEventPublisher _eventPublisher;
+
+        #endregion
+
         #region 构造函数
         public CustomerService(ICacheManager cacheManager,
             IRepository<Customer> customerRepository)
@@ -277,7 +311,18 @@ namespace ECommerce.Services.Customers
         /// <param name="customerRole">顾客角色</param>
         public virtual void DeleteCustomerRole(CustomerRole customerRole)
         {
+            if (customerRole == null)
+                throw new ArgumentNullException("customerRole");
 
+            if (customerRole.IsSystemRole)
+                throw new NopException("系统角色不能被删除");
+
+            _customerRoleRepostitory.Delete(customerRole);
+
+            _cacheManager.RemoveByPattern(CUSTOMERROLE_PATTERN_KEY);
+
+            //事件通知
+            _eventPublisher.EntityDeleted(customerRole);
         }
 
         /// <summary>
@@ -287,7 +332,9 @@ namespace ECommerce.Services.Customers
         /// <returns>顾客角色</returns>
         public virtual CustomerRole GetCustomerRoleById(int customerRoleId)
         {
-            return null;
+            if (customerRoleId == 0)
+                return null;
+            return _customerRoleRepostitory.GetById(customerRoleId);
         }
 
         /// <summary>
@@ -297,7 +344,23 @@ namespace ECommerce.Services.Customers
         /// <returns>顾客角色</returns>
         public virtual CustomerRole GetCustomerRoleBySystemName(string systemName)
         {
-            return null;
+            if (String.IsNullOrWhiteSpace(systemName))
+                return null;
+
+            string key = string.Format(CUSTOMERROLES_BY_SYSTEMNAME_KEY, systemName);
+
+            return _cacheManager.Get(key, () =>
+            {
+
+                var query = from cr in _customerRoleRepostitory.Table
+                            where cr.SystemName == systemName
+                            orderby cr.Id
+                            select cr;
+
+                var customerRoles = query.FirstOrDefault();
+
+                return customerRoles;
+            });
         }
 
         /// <summary>
@@ -307,7 +370,25 @@ namespace ECommerce.Services.Customers
         /// <returns>顾客角色列表</returns>
         public virtual IList<CustomerRole> GetAllCustomerRoles(bool showHidden = false)
         {
-            return null;
+            string key = string.Format(CUSTOMERROLES_ALL_KEY, showHidden);
+
+            //获取顾客角色，并缓存，同时返回记录。
+            return _cacheManager.Get(key, () =>
+            {
+                //var query = _customerRoleRepostitory.Table
+                //    .Where(r => showHidden || r.Active)
+                //    .OrderBy(r => r.Name);
+
+                var query = from cr in _customerRoleRepostitory.Table
+                            where (showHidden || cr.Active)
+                            orderby cr.Name
+                            select cr;
+
+                var customerRoles = query.ToList();
+
+                return customerRoles;
+            });
+
         }
 
         /// <summary>
@@ -316,7 +397,12 @@ namespace ECommerce.Services.Customers
         /// <param name="customerRole">顾客角色对象</param>
         public virtual void InsertCustomerRole(CustomerRole customerRole)
         {
+            if (customerRole == null)
+                throw new ArgumentNullException("customerRole");
 
+            _customerRoleRepostitory.Insert(customerRole);
+
+            _cacheManager.RemoveByPattern(CUSTOMERROLE_PATTERN_KEY);
         }
 
         /// <summary>
@@ -325,7 +411,15 @@ namespace ECommerce.Services.Customers
         /// <param name="customerRole">Customer role</param>
         public virtual void UpdateCustomerRole(CustomerRole customerRole)
         {
+            if (customerRole == null)
+                throw new ArgumentNullException("customerRole");
 
+            _customerRoleRepostitory.Update(customerRole);
+
+            _cacheManager.RemoveByPattern(CUSTOMERROLE_PATTERN_KEY);
+
+            //事件通知
+            _eventPublisher.EntityUpdated(customerRole);
         }
 
         #endregion

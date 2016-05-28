@@ -52,7 +52,7 @@ namespace ECommerce.Data
 
         #endregion
 
-        #region Methods
+        #region 方法
 
         /// <summary>
         /// 根据实体标识获取实体对象
