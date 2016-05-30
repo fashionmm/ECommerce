@@ -30,17 +30,19 @@ namespace ECommerce.Web.Controllers
         }
 
         #region 注册
+
         public ActionResult Register()
         {
-            if (_customerSetting.UserRegistrationType == UserRegistrationType.Disabled)
-                return RedirectToRoute("");
+            //if (_customerSetting.UserRegistrationType == UserRegistrationType.Disabled)
+            //    return RedirectToRoute("");
 
             var model = new RegisterModel();
             PrepareCustomerRegisterModel(model, false);
             return View(model);
         }
 
-        public ActionResult Register(RegisterModel model,string returnUrl,bool captchaValid,FormCollection form)
+        [HttpPost]
+        public ActionResult Register(RegisterModel model, string returnUrl, bool captchaValid, FormCollection form)
         {
             return View();
         }
